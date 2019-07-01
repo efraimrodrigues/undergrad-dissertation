@@ -1,0 +1,16 @@
+{
+  "title": "Image Unscrambler",
+  "name": "imageunscrambler",
+  "version": "0.0.1",
+  "description": "A add-on responsible for organizing and classifying images according to what they look.",
+  "main": "index.js",
+  "author": "Efraim Rodrigues",
+  "engines": {
+    "firefox": ">=38.0a1",
+    "fennec": ">=38.0a1"
+  },
+  "license": "MIT",
+  "keywords": [
+    "jetpack"
+  ]
+}
