@@ -1,0 +1,75 @@
+                                                                                                                                                                                                                                      
+\chapter[Introdução]{Introdução}
+% ----------------------------------------------------------
+
+Os avanços econômicos e tecnológicos das sociedades  facilitaram o acesso de grande parte da população a dispositivos tecnológicos com diversas funcionalidades, como permitir a aquisição e publicação de mídias na \emph{INTERNET}. Com uma quantidade massiva de indivíduos em posse destes dispositivos, uma grande quantidade de imagens digitais é gerada e publicada a todo instante na \emph{INTERNET}.
+
+Em função da grande quantidade de mídias disponíveis, a necessidade de organização e sistematização da busca por informações tem sido tratada por grupos e estudiosos de todo o mundo. Diversos serviços de busca, como, por exemplo,  \emph{Google, Microsoft, Yahoo!} e \emph{Ask} foram desenvolvidos com o objetivo de resolver este tipo de problema. Entretanto, no contexto de imagens digitais, a maioria destes serviços suportam buscas relacionadas a termos descritivos das imagens e, em geral, não utilizam  características semânticas inerentes às mesmas.
+
+O desenvolvimento de soluções para este tipo de problema se iniciou com base nas técnicas tradicionais de recuperação de imagens, como por exemplo relacionar uma classe de documentos à quantidade de vezes que uma palavra específica é encontrada. Entretanto algumas outras alternativas de métricas têm sido arquitetadas, como criar descritores estatísticos do conteúdo da imagem ou ainda combinar técnicas \cite{fundamentalsofmultimedia}.
+
+Muitos mecanismos de recuperação de mídias digitais têm proposto soluções que consideram a semântica das mídias. Este tipo de recuperação é conhecido como recuperação de imagens baseada no conteúdo (CBIR) \cite{eakins}. As técnicas CBIR são relativamente novas, mas amplamente usadas para recuperação de imagens em bases de dados de larga escala \cite{jain2011survey}.
+
+O principal objetivo das técnicas de resgate de imagens é auxiliar o usuário em recuperar imagens de maneira eficiente. Entretanto esta tarefa requer que o sistema entenda o real propósito de um usuário em uma busca. Por isso que as recuperações de imagens baseadas em texto (TBIR) e CBIR por si podem ser insatisfatórias. O fato é que a tarefa de entender o objetivo de um usuário em uma busca através de termos ou de uma imagem como parâmetros separados é desafiadora \cite{hartvedt2010using}. 
+
+Este trabalho propõe uma ferramenta a ser usada  no navegador \emph{Mozilla Firefox} que pode auxiliar o usuário na tarefa de busca por imagens. A ferramenta proposta é uma extensão que é ativada quando o navegador carrega uma página de resultados de busca por imagem do \emph{Google}. A extensão não interfere na navegação por outras páginas, mas ao detectar a página de interesse, a aplicação carrega as imagens que estão sendo exibidas no \emph{browser} e as separa em grupos definidos por usuário de acordo com as semelhanças encontradas nos conteúdos das imagens.
+
+\section{Problema}
+Algoritmos para filtragem e organização de mídias associadas a textos são conhecidos e aplicados a serviços de busca. No contexto de busca de imagens por palavra-chave, as ferramentas tomam como parâmetro os termos associados à imagem desconsiderando o conteúdo da imagem. O problema é que estes filtros ou organização proposta por estas ferramentas podem não corresponder ao nível de semelhança esperado pelo usuário.
+
+Os serviços de buscas de imagens \emph{on-line} não incluem, em seus algoritmos de filtragem de conteúdo, mecanismos de ordenação que fazem referências ao conteúdo das imagens. Desta forma as requisições retornam um grande número de imagens que não são organizadas levando em conta seus conteúdos. Assim, cabe ao usuário final a tarefa de filtrar visualmente o conteúdo das imagens a fim de se identificar quais delas correspondem ao resultado esperado.
+
+\section{Objetivos}
+
+\begin{comment}
+\textbf{objetivos está muito seco, coloque mais um parágrafo indicando os objetivos específicos}
+\end{comment}
+
+O objetivo deste trabalho é a implementação de um algoritmo capaz de
+classificar e organizar conjuntos de imagens resultantes do motor de busca do \emph{Google} a partir de semelhanças que as imagens apresentem em seus conteúdos. Para isto, pretende-se aplicar o método de nuvens dinâmicas, método de agrupamento indicado para dados complexos, nos autovetores dominantes e histogramas das imagens.
+
+Para alcançar os objetivos gerais, este trabalho tem como objetivos específicos:
+
+\begin{itemize}
+
+\item Ter acesso a imagens de uma página de resultados do serviço de busca do \emph{Google};
+
+\item Realizar a análise do conteúdo de imagens de uma página \emph{Web} e gerar descritores;
+
+\item Empregar o algoritmo de agrupamento por nuvens dinâmicas;
+
+\item Manipular a página \emph{Web} para exibir as imagens organizadas em grupos na própria página.
+
+\end{itemize}
+
+\section{Justificativa}
+\begin{comment}
+\textbf{Justificativa está muito seca, coloque mais coisas: buscas em bancos de imagens, aplicações médicas, busca de padrões para fenômenos climáticos através de fotos de satélite, etc...}
+\end{comment}
+
+Áreas como medicina, meteorologia e astronomia baseiam suas atividades em buscas feitas em volumosas bases de imagens que tendem a continuar crescendo. A busca por padrões e extração de conhecimento de base de dados tem se mostrado uma atividade vantajosa, não só para a ciência mas também para a economia \cite{berry1997data}.
+
+Álbuns digitais (e.g., \emph{Flickr, Photobucket, Picasa}) e acervos de imagens de propósito geral são apontados como responsáveis para a tendência no aumento de publicação de imagens na \emph{INTERNET} \cite{hartvedt2010using}. Entretanto, estes serviços não dispõem de mecanismos de organização que levam em conta o conteúdo das imagens. Então, busca-se aperfeiçoar a experiência de usuários no uso de ferramentas de resgate de imagens.
+
+\section{Organização}
+Além deste capítulo introdutório, este documento é constituído de mais quatro capítulos.\\
+
+\noindent
+\textbf{Capítulo 2 - Referencial Teórico}\\
+Este capítulo introduz os conceitos utilizados no desenvolvimento da aplicação proposta. A definição de imagem é apresentada, bem como a representação digital e os conceitos envolvidos no processo de sua aquisição. Além disso, são apresentados os conceitos de descritores e do algoritmo de agrupamento por nuvens dinâmicas. Também são expostos os conceitos essenciais implicados no funcionamento da \emph{INTERNET}.
+\\
+
+\noindent
+\textbf{Capítulo 3 - Extensão para o \emph{Mozilla Firefox}}\\
+O capítulo 3 descreve a metodologia utilizada para a solução do problema. As etapas de execução da aplicação são apresentadas.
+\\
+
+\noindent
+\textbf{Capítulo 4 - Resultados}\\
+O capítulo 4 apresenta uma discussão acerca dos resultados obtidos. 
+\\
+
+\noindent
+\textbf{Capítulo 5 - Conclusão e Trabalhos Futuros}\\
+Este capítulo expõe as percepções da solução proposta e direcionamentos que podem aprimorar a qualidade dos resultados e eficiência da aplicação.
+\\

@@ -1,0 +1,19 @@
+\chapter{Conclusão e Trabalhos Futuros}
+
+Diante da necessidade de organização de grandes volumes de imagens, este trabalho propôs uma aplicação que auxilia o usuário em suas buscas por imagens ao usar o serviço de busca de imagens do \emph{Google}. A aplicação desenvolvida possibilita que as imagens retornadas sejam dispostas em grupos que têm imagens semelhantes entre si. Desta forma, o usuário pode ter uma visão sistemática do resultado obtido, evitando assim, a necessidade de se visualizar todas as imagens quando se busca por uma específica.
+O \textit{software} desenvolvido corresponde a pesquisas iniciais na área e pode ser aperfeiçoado se implementado e disponibilizado em servidores dedicados a este tipo de serviço. 
+
+
+\begin{comment}
+No processo de geração dos descritores, a aplicação pode levar cerca de trinta segundos dependendo das configurações físicas da máquina em uso. O fato é que este processo itera por todos os \emph{pixels} de todas as imagens de entrada e para isso ainda é preciso desenhar a imagem no componente \emph{canvas}. Por estas razões a etapa de geração de descritores pode gastar cerca de trinta segundos. 
+
+O tempo de execução da aplicação pode ser melhorado com a implementação do algoritmo em uma linguagem compilada como C/C++. Outra alternativa para melhorar o tempo de execução seria executar o algoritmo no ambiente do servidor onde as imagens estão disponíveis, desta forma o uso do componentes \emph{canvas} não seria mais necessário. Bibliotecas para manipulação 
+\end{comment}
+
+Os resultados se mostraram satisfatórios dependendo do descritor adotado. O uso do autovetor dominante pareceu apropriado para os conjuntos de dados das Tabelas \ref{chaves} e \ref{gato}, como descrito no capítulo quatro. Já o uso do histograma pareceu adequado para as imagens das Tabelas \ref{lentilhaHistograma} e \ref{casa}. O fato é que a eleição de um descritor como melhor não é possível uma vez que cada conjunto de imagens é peculiar nas características mantidas pelo descritor, peculiar também assim como a expectativa do usuário.
+
+A qualidade dos resultados obtidos pela aplicação também depende que a quantidade de grupos escolhidas por usuário seja adequada à configuração dos elementos. No entanto, a tarefa de escolher uma quantidade de grupos adequada pode ser subjetiva para alguns conjuntos de imagens. Então a elaboração de algum mecanismo que indique uma quantidade de grupos adequada ao conjunto de dados aprimoraria a qualidade da aplicação.
+
+
+Como trabalhos futuros pretende-se a elaboração de meios para validação ou avaliação dos resultados obtidos. Com um método de avaliação dos resultados seria possível mensurar a qualidade dos descritores e ainda do algoritmo proposto. Além disso, trabalhos futuros estão relacionados com a utilização de outros descritores para imagens. Outra abordagem está relacionada também com a combinação de descritores que correspondem a um conjunto de descritores que otimize a separação das imagens.
+Propõe-se ainda a utilização de outros conjuntos de dados provenientes de outros acervos e serviços para que sejam usados como dados de entrada. Acervos com diferenças mais significativas entre as imagens podem oferecer uma melhor qualidade nos resultados. 
